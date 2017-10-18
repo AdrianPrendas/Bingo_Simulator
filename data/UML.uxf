@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.2">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>18</x>
+      <y>144</y>
+      <w>369</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Bingo
+--
++ Bingo initial
+
+--
++ boolean completeAndCheck(Bingo checker, StringBuilder html)
++ boolean completed(Bingo checker)
++ toString()
++ toTags()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>81</x>
+      <y>81</y>
+      <w>207</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>LinkedHashMap&lt;Character, List&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>189</x>
+      <y>99</y>
+      <w>27</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>396</x>
+      <y>153</y>
+      <w>423</w>
+      <h>225</h>
+    </coordinates>
+    <panel_attributes>Generator
+--
+
+--
+- List generate5NumbersInRange(int minRange, int maxRange)
++ Bingo generateBingo()
++ Bingo generateChecker(String shape)
+- Bingo checkerROW()
+- Bingo checkerCOL()
+- Bingo checkerFULL()
+- Bingo checkerC()
+- Bingo checkerL()
+- Bingo checkerO()
+- Bingo checkerU()
+- Bingo checkerX()
+- Bingo checker(Integer[] b, Integer[] i, Integer[] n, Integer[] g, Integer[] o)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>495</x>
+      <y>99</y>
+      <w>162</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>Hashtable&lt;String,List&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>567</x>
+      <y>117</y>
+      <w>27</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>387</x>
+      <y>0</y>
+      <w>333</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Note..
+bg=blue
+/*La idea es que almacene secuencias de 5 numeros*/
+/*B[1-15], I[16,30], N[31,45], G[46,60], O[61,75]*/
+/*randoms y sin repetir la secuencia*/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>72</x>
+      <y>333</y>
+      <w>261</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>Note..
+bg=blue
+/*Cada lista se accede por su caracter*/
+
+/*List 'B' = [1,2,3,4,5] elementos*/
+/*List 'I' = [1,2,3,4,5] elementos*/
+/*List 'N' = [1,2,3,4,5] elementos*/
+/*List 'G' = [1,2,3,4,5] elementos*/
+/*List 'O' = [1,2,3,4,5] elementos*/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>774</x>
+      <y>99</y>
+      <w>162</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>Hashtable&lt;String,List&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>666</x>
+      <y>387</y>
+      <w>369</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>Game
+--
++ int gamers
++ int maxGamesPerGames
++ String typeGame
++ Bingo checker
++ StringBuilder html
++ HashSet&lt;String&gt; balls
+--
++ Game(int gamers, int maxGamesPerGamer, String typeGame)
++ void play()
++ boolean winner(String number)
++ String getWinner()
++ String getWinnerTag()
++ String toString()
++ String toTags()
++ void writeHTML()
++ String initialParams()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>846</x>
+      <y>117</y>
+      <w>27</w>
+      <h>288</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;300.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>864</x>
+      <y>243</y>
+      <w>180</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Note..
+bg=blue
+/*Almacena los usuarios*/
+/*y su lista de cartones*/</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

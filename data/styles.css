@@ -1,0 +1,46 @@
+div table{
+	display: inline-block;
+}
+
+div div{
+	display: inline-block;
+}
+
+table{
+	font-size: 30px;
+}
+
+.X{
+	color:red;
+}
+
+.box {
+  width: auto;
+  height: auto;
+  margin: 1em;
+}
+.after-box {
+  clear: left;
+	margin: 1em;
+
+  border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+border: 0px solid #000000;
+
+-webkit-box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.container{
+	margin-top: 1em;
+	  border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+border: 0px solid #000000;
+
+-webkit-box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+}
