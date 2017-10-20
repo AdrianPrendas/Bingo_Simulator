@@ -1,5 +1,6 @@
 package test;
 
+import java.util.ArrayList;
 import model.Game;
 import java.util.Scanner;
 import util.Console;
@@ -11,19 +12,30 @@ import util.Console;
 public class test {
     
     public static void main(String [] args){
-        Scanner scan = new Scanner(System.in);
-        String str;
+        String type;
+        int gamers;
+        int grids;
+        Game g;
+        
         Console.log("ingrese el numero de personas:");
-        str = scan.next();
-        int gamers = Integer.parseInt(str);
+        gamers = Console.integerIn();
+        
         Console.log("numero de cartones maximo por persona:");
-        str = scan.next();
-        int grids = Integer.parseInt(str);
+        grids = Console.integerIn();
+        
         Console.log("tipo de juego: [X,L,C,U,O,FULL,ROW,COLL]");
-        str = scan.next();
-        Game g = new Game(gamers,grids,str);
+        
+        type = Console.typeGameIn();
+        g = new Game(gamers,grids,type);
+        
 Console.log(g.toString());
         g.play();
         
+        try{
+            Process myProcess = new ProcessBuilder(
+                    "\"C:\\\\Program Files (x86)\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\"",
+                    "data\\simulacion.html").start();
+        }catch(Exception e){e.printStackTrace();}
+       
     }
 }

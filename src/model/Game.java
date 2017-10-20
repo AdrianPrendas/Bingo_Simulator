@@ -180,23 +180,24 @@ this.writeHTML();
     }
     
     public void writeHTML(){
-        
+        String html = new String();
         try{
         List list = IOServices.readTextFileAsList("data/", "base.html");
         Iterator<String> it = list.iterator();
-        String str ="";
-        for(;it.hasNext();) str += it.next() +"\n";
+        String htmlBase ="";
+        for(;it.hasNext();) htmlBase += it.next() +"\n";
         
-        str+= this.initialParams();
+        htmlBase+= this.initialParams();
         
         
-        String close =
+        String htmlClose =
 "</body>\n"+
 "</html>";
-        System.out.println(str);
-        IOServices.writeText("data/", "simulacion.html", str+this.html.toString()+close);
         
+        html = htmlBase+this.html.toString()+htmlClose;
+        IOServices.writeText("data/", "simulacion.html",html);
         }catch(Exception e){e.printStackTrace();}
+        System.out.println(html);
     }
     
     public String initialParams(){
